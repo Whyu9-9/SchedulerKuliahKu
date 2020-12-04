@@ -58,7 +58,10 @@ public class scheduleDetail extends AppCompatActivity {
                 builder.setTitle("Delete Data");
                 builder.setMessage("Apakah anda yakin ingin menghapus data?")
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
+                            public void onClick(DialogInterface dialog, int which) {
+                                database = RoomDB.getInstance(getApplicationContext());
+                                database.mainDao().deleteSchedule(id);
+                                MainActivity.recyclerView.getAdapter().notifyDataSetChanged();
                                 Intent i = new Intent(scheduleDetail.this, MainActivity.class);
                                 String success = "success";
                                 i.putExtra("sucdel",success);
@@ -78,8 +81,6 @@ public class scheduleDetail extends AppCompatActivity {
     private void getIncomingExtra() {
         if (getIntent().hasExtra("id")) {
             id = getIntent().getIntExtra("id", 0);
-            Toast toast = Toast.makeText(getApplicationContext(), "Data Berhasil Ditambahkan", Toast.LENGTH_SHORT);
-            toast.show();
         }
     }
 

@@ -15,8 +15,8 @@ public interface MainDao {
     @Insert(onConflict = REPLACE)
     void insert(MainData mainData);
 
-    @Delete
-    void delete(MainData mainData);
+    @Query("DELETE FROM schedule where ID = :id")
+    void deleteSchedule(int id);
 
     @Delete
     void reset(List<MainData> mainData);

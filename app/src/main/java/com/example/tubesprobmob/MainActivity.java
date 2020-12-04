@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    RecyclerView recyclerView;
+    public  static RecyclerView recyclerView;
     List<MainData> dataList = new ArrayList<>();
     LinearLayoutManager linearLayoutManager;
     RoomDB database;
