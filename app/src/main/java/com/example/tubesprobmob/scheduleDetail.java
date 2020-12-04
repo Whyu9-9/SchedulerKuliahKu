@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class scheduleDetail extends AppCompatActivity {
     Button editbtn, deletebutton;
@@ -24,18 +25,18 @@ public class scheduleDetail extends AppCompatActivity {
     }
 
     private void init() {
-        matkul = (TextView)findViewById(R.id.txtjudulMatkul);
-        hari = (TextView)findViewById(R.id.edithariDanJam);
-        dosen = (TextView)findViewById(R.id.txtdosen);
-        link = (TextView)findViewById(R.id.txtlink);
-        kode = (TextView)findViewById(R.id.txtkodeMatkul);
-        
+        matkul = findViewById(R.id.txtjudulMatkul);
+        hari = findViewById(R.id.txthariDanJam);
+        dosen = findViewById(R.id.txtdosen);
+        link = findViewById(R.id.txtlink);
+        kode = findViewById(R.id.txtkodeMatkul);
+
         editbtn = findViewById(R.id.editData);
         deletebutton = findViewById(R.id.deleteData);
-        
+
         getIncomingExtra();
         getDetail();
-        
+
         editbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,7 +49,6 @@ public class scheduleDetail extends AppCompatActivity {
                 intent.putExtra("id", id);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
-                finish();
             }
         });
         deletebutton.setOnClickListener(new View.OnClickListener() {
@@ -78,11 +78,13 @@ public class scheduleDetail extends AppCompatActivity {
     private void getIncomingExtra() {
         if (getIntent().hasExtra("id")) {
             id = getIntent().getIntExtra("id", 0);
+            Toast toast = Toast.makeText(getApplicationContext(), "Data Berhasil Ditambahkan", Toast.LENGTH_SHORT);
+            toast.show();
         }
     }
 
     private void getDetail() {
-        database = RoomDB.getInstance(getApplicationContext());
+        database = RoomDB.getInstance(scheduleDetail.this);
         MainData main = database.mainDao().loadById(id);
 
         matkul.setText(main.getJudulMatkul());
