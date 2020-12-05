@@ -28,19 +28,23 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:layout_marginBottom="-10dp"
             android:layout_alignParentRight="true"
             android:layout_centerInParent="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="20dp"
             android:padding="5dp"
             app:srcCompat="@drawable/ic_sub" />
-        <EditText
-            android:id="@+id/judulMatkul"
-            android:layout_width="300dp"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="wrap_content"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/txtaddjudul">
+            <EditText
+                android:id="@+id/judulMatkul"
+                android:layout_width="300dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
     </androidx.cardview.widget.CardView>
     <TextView
         android:layout_marginTop="15dp"
@@ -63,19 +67,23 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:layout_marginBottom="-10dp"
             android:layout_alignParentRight="true"
             android:layout_centerInParent="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="20dp"
             android:padding="5dp"
             app:srcCompat="@drawable/ic_sub" />
-        <EditText
-            android:id="@+id/hariDanJam"
-            android:layout_width="300dp"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="wrap_content"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/txtaddjam">
+            <EditText
+                android:id="@+id/hariDanJam"
+                android:layout_width="300dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
     </androidx.cardview.widget.CardView>
     <TextView
         android:layout_marginTop="15dp"
@@ -98,19 +106,24 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:layout_marginBottom="-10dp"
             android:layout_alignParentRight="true"
             android:layout_centerInParent="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="20dp"
             android:padding="5dp"
             app:srcCompat="@drawable/ic_sub" />
-        <EditText
-            android:id="@+id/dosen"
-            android:layout_width="300dp"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="wrap_content"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/txtadddosen">
+            <EditText
+                android:id="@+id/dosen"
+                android:layout_width="300dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
     </androidx.cardview.widget.CardView>
     <TextView
         android:layout_marginTop="15dp"
@@ -133,19 +146,24 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:layout_marginBottom="-10dp"
             android:layout_alignParentRight="true"
             android:layout_centerInParent="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="20dp"
             android:padding="5dp"
             app:srcCompat="@drawable/ic_sub" />
-        <EditText
-            android:id="@+id/link"
-            android:layout_width="300dp"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="wrap_content"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/txtaddlink">
+            <EditText
+                android:id="@+id/link"
+                android:layout_width="300dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
     </androidx.cardview.widget.CardView>
     <TextView
         android:layout_marginTop="15dp"
@@ -168,24 +186,29 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:layout_marginBottom="-10dp"
             android:layout_alignParentRight="true"
             android:layout_centerInParent="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="20dp"
             android:padding="5dp"
             app:srcCompat="@drawable/ic_sub" />
-        <EditText
-            android:id="@+id/kodeMatkul"
-            android:layout_width="300dp"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="wrap_content"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/txtaddkode">
+            <EditText
+                android:id="@+id/kodeMatkul"
+                android:layout_width="300dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
     </androidx.cardview.widget.CardView>
     <Button
         android:id="@+id/saveData"
         android:layout_width="350dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="70dp"
         android:text="Save"
         android:textColor="@color/white"
         android:background="@drawable/btn_round"

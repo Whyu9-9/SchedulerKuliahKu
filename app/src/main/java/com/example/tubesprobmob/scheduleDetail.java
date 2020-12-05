@@ -49,6 +49,7 @@ public class scheduleDetail extends AppCompatActivity {
                 intent.putExtra("id", id);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
+                finish();
             }
         });
         deletebutton.setOnClickListener(new View.OnClickListener() {

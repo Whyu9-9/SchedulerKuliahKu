@@ -29,4 +29,7 @@ public interface MainDao {
 
     @Query("SELECT * FROM schedule")
     List<MainData> getAll();
+
+    @Query("UPDATE schedule set judulMatkul = :editmatkul, hariJam = :edithari, dosen = :editdosen, link = :editlink, kodeMatkul = :editkode where ID = :sID")
+    void updateSchedule(int sID, String editmatkul, String edithari, String editdosen, String editlink, String editkode);
 }
