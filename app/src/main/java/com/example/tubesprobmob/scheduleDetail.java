@@ -4,16 +4,21 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class scheduleDetail extends AppCompatActivity {
     Button editbtn, deletebutton;
+    ImageView copy;
     TextView matkul,hari,dosen, link,kode;
     RoomDB database;
     int id;
@@ -34,8 +39,21 @@ public class scheduleDetail extends AppCompatActivity {
         editbtn = findViewById(R.id.editData);
         deletebutton = findViewById(R.id.deleteData);
 
+        copy = findViewById(R.id.copy);
+
         getIncomingExtra();
         getDetail();
+
+        copy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ClipboardManager cop = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                ClipData clip = ClipData.newPlainText("txtLink", link.getText().toString());
+                cop.setPrimaryClip(clip);
+
+                Toast.makeText(scheduleDetail.this,"Link Coppied",Toast.LENGTH_SHORT).show();
+            }
+        });
 
         editbtn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -158,6 +158,15 @@
             android:layout_marginLeft="10dp"
             android:layout_gravity="center_horizontal"
             android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/copy"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="310dp"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_copy"/>
     </androidx.cardview.widget.CardView>
     <TextView
         android:layout_marginTop="15dp"
