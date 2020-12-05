@@ -11,7 +11,7 @@
     <color name="button">#15c427</color>
     <color name="contentTextColor">#020000</color>
     <color name="colorPrimary">#03a9f4</color>
-    <color name="semiTransparentColor">#80FFFFFF</color>
+    <color name="semiTransparentColor">#FFFFFF</color>
     <color name="blue">#1567c4</color>
     <color name="red">#df1717</color>
 </resources>
