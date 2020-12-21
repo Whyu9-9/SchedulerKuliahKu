@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "247200589444",
+    "project_id": "tubesprobmob",
+    "storage_bucket": "tubesprobmob.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:247200589444:android:04a5e515c740115be404d1",
+        "android_client_info": {
+          "package_name": "com.example.tubesprobmob"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "247200589444-k3q5ric22b5f31c2k5uup1qqo4ndnfdi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQ1APjc9EBz2QacxPkOZUQBvUdr7in1TQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "247200589444-k3q5ric22b5f31c2k5uup1qqo4ndnfdi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
